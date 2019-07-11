@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { withStyles } from "@material-ui/core/styles";
+import AppStyle from  './AppStyle.js';
 
-function App() {
+class App extends React.Component{
+  render(){
+    const { classes } = this.props;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.card} >
+     Hello Sample with material ui
     </div>
   );
 }
+}
 
-export default App;
+export default withStyles(AppStyle)(App);
